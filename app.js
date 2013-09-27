@@ -22,28 +22,28 @@ passport.use(new LocalStrategy( {
     passwordField: 'pwd'
   },
   function(username, password, done) {
-	console.log("LocalStrategy" );
-	
-	if (username == 'test' && password == 'test') {
-		console.log( 'login accepted' );
-		return done(null, username);
-	}
-	
-	console.log( 'login refused' );
-	return done(null, false, { message: 'Incorrect username/password.' } );
+    console.log("LocalStrategy" );
+    
+    if (username == 'test' && password == 'test') {
+        console.log( 'login accepted' );
+        return done(null, username);
+    }
+    
+    console.log( 'login refused' );
+    return done(null, false, { message: 'Incorrect username/password.' } );
   }
 ));
 
 
 passport.serializeUser(function(username, done) {
-	//console.log("serializeUser " + username );
-	done(null, { 'auth_username': username } );
+    //console.log("serializeUser " + username );
+    done(null, { 'auth_username': username } );
 });
 
 passport.deserializeUser(function(user, done) {
-	//console.log("deserializeUser ");
-	//console.log(util.inspect(user,false,null));
-	done(null, user.auth_username );
+    //console.log("deserializeUser ");
+    //console.log(util.inspect(user,false,null));
+    done(null, user.auth_username );
 });
 
 
@@ -83,21 +83,7 @@ app.configure(function() {
 
     app.use(express.static(path.join(__dirname, 'client')));
 
-
-    app.post('/login', passport.authenticate( 'local', { successRedirect: '/demo/restrictedarea/welcome',
-                                       failureRedirect: '/demo/login' } )
-    );  
-	
-	//app.post('/login', 
-		//function(req,res) {
-			//console.log(" user=" + req.body.usr );
-			//console.log(" pwd=" + req.body.pwd );
-			//
-			//res.writeHead(200, {'Content-Type': 'text/plain'});
-			//res.end('Hello World\n');
-	//});
-	
-
+    
     // implicitely require and register all entries from ./pages
     fs.readdirSync(__dirname+'/nwdemo/model').forEach(function(file) {
         if (file.match("\.js$")) {
