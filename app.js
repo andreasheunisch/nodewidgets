@@ -48,11 +48,11 @@ passport.deserializeUser(function(user, done) {
 
 
 
-
-nodewidgets.db_oracle.connect( null, 
-    function() { console.log( "connected." ) },
-    function() { console.log( "Could not connect!" ) }    
-);
+//~ 
+//~ nodewidgets.db_oracle.connect( null, 
+    //~ function() { console.log( "connected." ) },
+    //~ function() { console.log( "Could not connect!" ) }    
+//~ );
 
 
 

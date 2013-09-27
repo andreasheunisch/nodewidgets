@@ -2,12 +2,13 @@
 var nodewidgets  = require("nodewidgets");
 var passport  = require("passport");
 
+var baseUrl = '/demo/dataviews/grid';
 
 var demotablewidget = new nodewidgets.gridview_backend.GridView( {
 
     name: 'demo',
 
-    url: '/demo/dataviews/grid',
+    url: baseUrl,
     
     columnDefs: [
         { caption: 'Count', fldid:'fld1' },
@@ -45,8 +46,7 @@ exports.registerExpressAppRoutes = function(app) {
 
 	demotablewidget.registerExpressAppRoutes(app);
 
-	app.get( demotablewidget.url, 
-	      function(req, res) {
+	app.get( baseUrl, function(req, res) {
             res.render('demo_dataviews_grid');
     });
 }
