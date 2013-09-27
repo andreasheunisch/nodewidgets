@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  ul.nav.nav-pills
+    li 
+        a(href="/demo") Home
+    li 
+        a(href="/demo/dataviews") Data Views
+    li.active 
+        a(href="/demo/dataviews/grid") Grid
+
+
+  div( ng-controller="NWGridViewCtrl" ).nw-frame
+    nwgridviewrefresbtn
+
+    nwgridview( serviceurl="/demo/dataviews/grid" )
+    nwgridviewpagectrl
+    nwgridviewpager
+
+     
+  
+  
+        
+  

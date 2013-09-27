@@ -1,0 +1,38 @@
+doctype 5
+html( ng-app="nwdemo" )
+
+
+  head
+    title= title
+    meta( charset="UTF-8" )
+    
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/nodewidgets/css/nw_styles.css')
+    link(rel='stylesheet', href='/nwdemo/css/nwdemo.css')    
+
+    script(src='/bootstrap/js/jquery.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+
+    script(src='/angular/angular.js')
+    script(src='/angular/angular-sanitize.min.js')
+    
+    script(src='/nodewidgets/js/nw_main.js')
+    script(src='/nodewidgets/js/nw_loginform.js')
+    script(src='/nodewidgets/js/nw_formview.js')
+    script(src='/nodewidgets/js/nw_gridview.js')
+    script(src='/nodewidgets/js/nw_valuefilters.js')
+    script(src='/nwdemo/js/rowformat.js')
+    script(src='/nwdemo/js/nwdemo_main.js')
+
+  body
+    div.container
+    
+        div.navbar
+          div.navbar-inner
+            a.brand(href="/demo") NodeWidgets Demo
+
+
+        block content
+
+

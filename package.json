@@ -1,0 +1,19 @@
+{
+  "name": "widgets-test",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  
+  "dependencies": {
+    "jade": "*",
+    "express": "*",
+    "oracle":"*",
+    "pg": "*",
+    "iconv" :"*",
+    "passport" :"*",
+    "passport-local" :"*",
+    "connect-flash": "*"
+  }
+}

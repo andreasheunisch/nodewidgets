@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>500</x>
+      <y>180</y>
+      <w>220</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>/TableModel/
+--
+name
+url
+numRows
+numColumns
+columnDefs
+--
+getTableData(options): data
+getRowData(options): data</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>500</x>
+      <y>390</y>
+      <w>220</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>/FieldDef/
+--
+name
+prefix
+suffix
+filter
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>540</x>
+      <y>300</y>
+      <w>130</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+columnDefs</panel_attributes>
+    <additional_attributes>70;30;70;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>870</x>
+      <y>180</y>
+      <w>140</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>SqlQuery
+--
+db
+tablename</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>690</x>
+      <y>220</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;180;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>280</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>TableOptions
+--
+startRow
+count
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
